@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom: 3000px; /* remover despues*/
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f9f9f9;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #606060;
+  border-radius: 4px;
+  width: 6px;
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  height: 56px;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 100;
+}
+
+header .header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+header .left-container {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .left-container .hamburger-menu-icon {
+  padding-left: 8px;
+  padding-right: 24px;
+  cursor: pointer;
+}
+
+header .left-container .youtube-logo {
+  cursor: pointer;
+}
+
+header .middle-container {
+  width: 728px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .middle-container .search-input {
+  font-family: "Roboto", sans-serif;
+  height: 40px;
+  min-width: 538px;
+  margin-left: 34px;
+  padding-left: 6px;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #ccc;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+header .middle-container .search-btn {
+  height: 40px;
+  width: 64px;
+  border: 1px solid #ccc;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-left: -1px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+header .middle-container .voice-btn {
+  margin-left: 16px;
+  height: 40px;
+  width: 40px;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+header .right-container {
+  width: 224px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header .right-container button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+header .right-container .user-profile {
+  width: 32px;
+  border-radius: 100%;
+}
+
+header .header-container button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header-container button .tooltip {
+  position: absolute;
+  background-color: rgba(96, 96, 96, 0.9);
+  color: white;
+  bottom: -36px;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 14px;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+header .header-container button:hover .tooltip {
+  visibility: visible;
+}
+
+aside {
+  background-color: white;
+  position: fixed;
+  width: 240px;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  margin-top: -1px;
+  z-index: 100;
+}
+
+aside .aside-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+aside .top-sidebar {
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+aside .bottom-sidebar {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e5e5;
+  flex: 1;
+}
+
+aside .link-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  cursor: pointer;
+}
+
+aside .link-container p {
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #030303;
+}
+
+aside .link-container.active {
+  background-color: #eae8e8;
+}
+
+aside .link-container:hover {
+  background-color: #f1f1f1;
+}
+
+aside .link-container.active:hover {
+  background-color: #dfdcdc;
+}
+
+aside .link-container img {
+  margin-right: 24px;
+}
+
+main {
+  background-color: #f9f9f9;
+  margin-top: 56px;
+  margin-left: 240px;
+}
+
+main .main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 32px;
+  padding: 32px 16px;
+}
+
+main article .video-container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+main article .img-container {
+  flex: 1;
+  position: relative;
+}
+
+main article .img-container img {
+  width: 100%;
+  cursor: pointer;
+}
+
+main article .img-container p {
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  right: 12px;
+  bottom: 12px;
+}
+
+main article .description-container {
+  display: flex;
+}
+
+main article .description-left-container {
+  width: 40px;
+}
+
+main article .description-left-container img {
+  width: 36px;
+  border-radius: 100%;
+  margin-top: 8px;
+}
+
+main article .description-right-container {
+  flex: 1;
+  font-family: Roboto, sans-serif;
+  padding-left: 8px;
+}
+
+main article .video-title {
+  font-size: 16px;
+  color: #030303;
+  margin-bottom: 4px;
+}
+
+main article .video-author,
+main article .video-views {
+  font-size: 14px;
+  color: #606060;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 679px) {
+  main .main-container {
+    grid-template-columns: 1fr;
+  }
+  header .middle-container {
+    width: 128px;
+  }
+
+  header .middle-container .search-input {
+    display: none;
+  }
+
+  header .middle-container .search-btn {
+    height: 40px;
+    width: 40px;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 100%;
+  }
+
+  aside .aside-container p {
+    display: none;
+  }
+
+  aside {
+    width: 64px;
+  }
+
+  main {
+    margin-left: 64px;
+  }
+}
+
+@media (min-width: 680px) and (max-width: 890px) {
+  main .main-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .middle-container {
+    width: 360px;
+  }
+
+  header .middle-container .search-input {
+    min-width: 80px;
+  }
+
+  aside .aside-container p {
+    display: none;
+  }
+
+  aside {
+    width: 64px;
+  }
+
+  main {
+    margin-left: 64px;
+  }
+}
+
+@media (min-width: 891px) and (max-width: 1145px) {
+  main .main-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header .middle-container {
+    width: 528px;
+  }
+
+  header .middle-container .search-input {
+    min-width: 320px;
+  }
+}
+
+@media (min-width: 1146px) {
+  main .main-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
